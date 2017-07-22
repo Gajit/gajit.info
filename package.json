@@ -1,0 +1,37 @@
+{
+  "name": "gajit.info",
+  "version": "1.0.0",
+  "description": "Website for Gajit",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+   "build": "node build.js",
+   "deploy": "npm run build && cd build && git init . && git add . && git commit -m \"Deploy\"; git push \"git@github.com:Gajit/gajit.github.io.git\" master:gh-pages --force && rm -rf .git"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gajit/gajit.info.git"
+  },
+  "author": "greg.johns@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gajit/gajit.info/issues"
+  },
+  "homepage": "https://github.com/Gajit/gajit.info#readme",
+  "dependencies": {
+    "highlighter": "^0.1.0",
+    "jade": "^1.11.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-build-date": "^0.2.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-collections-paginate": "^2.0.1",
+    "metalsmith-define": "^2.0.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-pagination": "^1.4.0",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-snippet": "^2.0.0",
+    "metalsmith-templates": "^0.7.0",
+    "moment": "^2.18.1"
+  }
+}
